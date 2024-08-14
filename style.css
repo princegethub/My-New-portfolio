@@ -775,8 +775,8 @@ ul {
   }
 
   .home-page .main-content .socal_links {
-    width: 100%;
-    margin-top: -174px;
+    /* width: 100%; */
+    /* margin-top: -174px; */
     display: flex;
     justify-content: center;
     height: 10%;
