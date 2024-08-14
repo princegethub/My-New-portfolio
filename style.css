@@ -1,31 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zain:wght@200;300;400;700;800;900&display=swap');
 
 :root {
-  /* --bg-black-900: #f2f2fc;
-    --bg-black-100: #fdf9ff;
-    --bg-black-50: #e8dfec;
-    --text-black-900: #302e4d;
-    --text-black-700: #504e70; */
+  
   --main-bg-color: rgb(255, 44, 43);
   --gradient-start: rgba(255, 44, 43, 0.5);
-  /* Define the start color of the gradient */
+
   --gradient-end: rgba(46, 46, 46, 0);
-  /* Define the end color of the gradient */
-  --text-color-gray: rgb(46, 46, 46);
+  --text-color-gray:  rgb(46, 46, 46);
   --text-color-white: #fff;
   --main-bg-color-light: rgba(244, 44, 43, 0.3);
 
 }
 
-/* body.dark {
 
-    --bg-black-900: #151515;
+
+ body.dark {
+
+  --text-color-gray:  #fff;
     --bg-black-100: #222222;
-    --bg-black-50: #393939;
-    --text-black-900: #ffffff;
-    --text-black-700: #e9e9e9;
+    --text-color-white: #f9f9f9;
+    background-color: #151515;
 
-} */
+} 
 
 body {
   margin: 0;
@@ -36,6 +32,7 @@ body {
   width: 100%;
   height: 100%;
   color: var(--text-color-white);
+  
 }
 
 * {
@@ -61,9 +58,13 @@ ul {
   height: 100%;
   display: flex;
   flex-direction: row;
+  position: relative;
 
 }
-
+#dark_mode{
+  transition: all 0.3s ease;
+  font-size: 1rem`;
+}
 .aside {
   width: 30vw;
   height: 100vh;
@@ -127,7 +128,7 @@ ul {
 }
 
 .aside .text_area .text_content {
-  margin-top: 30px;
+  margin-top: 5px;
 
 }
 
@@ -277,6 +278,19 @@ ul {
 
 }
 
+.home-page .main-content .content .text_profile_section .btn_container {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+
+}
+
+.home-page .main-content .content .text_profile_section .cv_btn {
+
+  margin-left: 35px;
+
+}
+
 .home-page .main-content .content .text_profile_section .text_container {
   height: 350px;
   width: 50%;
@@ -347,6 +361,8 @@ ul {
 }
 
 .home-page .main-content .socal_links {
+  position: fixed;
+  right: 0;
   width: 5%;
   /* background-color: rgb(5, 106, 156); */
   height: 100vh;
@@ -365,17 +381,63 @@ ul {
 
 }
 
-.home-page .main-content .socal_links .socal_media_links {
+
+.social-icons {
+  padding: 0;
+  list-style: none;
   display: flex;
   flex-direction: column;
-  height: 200px;
-  /* background-color: magenta; */
-  justify-content: space-between;
+
+}
+
+.social-icons li {
+  margin: 20px 0;
+}
+
+.social-icons li a,
+.socal_links a {
+  border: 3px solid var(--main-bg-color);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color-white);
+  border-radius: 50%;
+  border-right: none;
+  border-top: none;
+  transition: 0.3s ease;
+}
+
+.social-icons li a:hover {
+  border-top: 3px solid;
+  border-right: 3px solid;
+  color: var(--text-color-white);
+  transform: rotate(360deg);
+  background-color: var(--main-bg-color);
+
+  border-color: var(--text-color-white);
+}
+
+.social-icons li a:hover i {
+  color: white;
 }
 
 
+.socal_links a:hover {
+  border-top: 3px solid;
+  border-right: 3px solid;
+  color: var(--text-color-white);
+  transform: rotate(360deg);
+  background-color: var(--main-bg-color);
 
+  border-color: var(--text-color-white);
+}
 
+.socal_links a:hover i {
+  color: white;
+}
 
 /* Default styles (for desktop) remain as you have provided */
 
@@ -527,8 +589,9 @@ ul {
 
   .aside .text_area .bar {
     font-size: 1.5rem;
-    text-align: right;
-    width: 100%;
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
   }
 
   .aside .text_area .desgin_progressbar {
@@ -759,12 +822,67 @@ ul {
 
   .home-page .main-content .socal_links {
     font-size: 0.75rem;
+    margin: 50px auto;
+
+
   }
+
+  /* Hide other icons and adjust social icons */
+  .home-page .main-content .socal_links>a {
+    display: none;
+    /* Hide the other icons */
+  }
+
+  /* Style for social icons row-wise at the bottom center */
+
+  /* Social icons in the bottom center of home page only */
+  .home-page .main-content .socal_links .socal_media_links {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    /* Change from fixed to absolute */
+    bottom: 0;
+    /* Align to bottom of the home-page */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center horizontally */
+    width: 100%;
+    background-color: #fff;
+    /* Optional: Background color for visibility */
+    padding: 10px 0;
+    /* Padding for spacing */
+  }
+
+
+  .home-page .main-content .socal_links .socal_media_links .social-icons {
+    position: absolute;
+    background: #f9f9f9;
+    padding: 12px 15px;
+    border-radius: 20px;
+  
+    right: 0;
+    top: -107px;
+
+  }
+
+  .home-page .main-content .socal_links .socal_media_links .social-icons li {
+    list-style: none;
+
+  }
+
+  .home-page .main-content .socal_links .socal_media_links .social-icons li a {
+    font-size: 1.5rem;
+    /* Adjust size if needed */
+    color: #000;
+    /* Adjust icon color */
+  }
+
 }
 
 
+
 .end_line {
-  width: 100%;
+  width: 95%;
   height: 4px;
   background-color: var(--main-bg-color);
 }
@@ -785,7 +903,7 @@ ul {
 
 .about_text {
   text-align: center;
-  color: #2E2E2E;
+  color: var(--text-color-gray);
   font-size: 1rem;
   font-weight: 500;
   width: 80%;
@@ -816,7 +934,7 @@ ul {
   margin-top: 100px;
   width: 65%;
   height: 180px;
-  background-color: #f9f9f9;
+  background-color: var(--bg-black-100);
   cursor: pointer;
   /* background-color: white; */
   color: var(--text-color-gray);
@@ -997,7 +1115,7 @@ ul {
 .project_section .project_card {
   width: 65%;
   height: 200px;
-  background-color: #f9f9f9;
+  background-color: var(--bg-black-100);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border: 20px;
   overflow: hidden;
@@ -1122,17 +1240,18 @@ ul {
   }
 
   .project_section .project_card {
-   
+    flex: none;
     height: 161px;
   }
 }
 
 /* =================mobile view=================== */
 @media (min-width: 414px) and (max-width: 768px) {
-  .project_section .project_card{
+  .project_section .project_card {
     flex-direction: column;
     height: 400px;
   }
+
   .project_section .project_card .project_text_sec p {
     font-size: 7px;
 
@@ -1149,11 +1268,13 @@ ul {
   .project_section .project_card {
     height: 300px;
   }
-  .project_section .project_card .card_image{
+
+  .project_section .project_card .card_image {
     width: 100%;
   }
-   .project_section .project_card .project_text_sec{
-    width: 100% ;
+
+  .project_section .project_card .project_text_sec {
+    width: 100%;
     padding: 0 10px;
     margin-top: -10px;
   }
@@ -1163,48 +1284,55 @@ ul {
 
 
 @media (min-width: 768px) {
-  
 
-.project_card {
-  display: flex;
-  flex: 1 1 calc(50% - 20px); /* Two cards per row, adjust width and gap */
-  box-sizing: border-box;
-  overflow: hidden;
-}
 
-.card_image {
-  flex: 1; /* Take up half of the card */
-}
+  .project_card {
+    display: flex;
+    flex: 1 1 calc(50% - 20px);
+    /* Two cards per row, adjust width and gap */
+    box-sizing: border-box;
+    overflow: hidden;
+  }
 
-.card_image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+  .card_image {
+    flex: 1;
+    /* Take up half of the card */
+  }
 
-.card_text {
-  flex: 1; /* Take up half of the card */
-  padding: 20px; 
-  box-sizing: border-box;
-}
+  .card_image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
-/* Alternate layout for every second card */
-.project_card:nth-of-type(odd) .card_image {
-  order: 1; /* Image on the right */
-}
+  .card_text {
+    flex: 1;
+    /* Take up half of the card */
+    padding: 20px;
+    box-sizing: border-box;
+  }
 
-.project_card:nth-of-type(odd) .card_text {
-  order: 0; /* Text on the left */
-}
+  /* Alternate layout for every second card */
+  .project_card:nth-of-type(odd) .card_image {
+    order: 1;
+    /* Image on the right */
+  }
 
-/* Style for even cards if needed */
-.project_card:nth-of-type(even) .card_image {
-  order: 0; /* Image on the left */
-}
+  .project_card:nth-of-type(odd) .card_text {
+    order: 0;
+    /* Text on the left */
+  }
 
-.project_card:nth-of-type(even) .card_text {
-  order: 1; /* Text on the right */
-}
+  /* Style for even cards if needed */
+  .project_card:nth-of-type(even) .card_image {
+    order: 0;
+    /* Image on the left */
+  }
+
+  .project_card:nth-of-type(even) .card_text {
+    order: 1;
+    /* Text on the right */
+  }
 
 
 
@@ -1226,7 +1354,7 @@ ul {
 /* <!-- ============contact start start=============== --> */
 
 
-#heding{
+#heding {
   font-family: "Zain", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1236,21 +1364,25 @@ ul {
   /* margin-top: 50px; */
 
 }
+
 /* ============ Contact Section ============ */
 .contact_section {
   width: 100%;
-  height: auto; /* Changed to auto for better responsiveness */
+  height: auto;
+  /* Changed to auto for better responsiveness */
   display: flex;
   flex-direction: column;
   align-items: center;
   line-height: 2;
 }
-.contact_section .contact_details{
+
+.contact_section .contact_details {
   width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .contact_section .doubt_text {
   width: 75%;
   margin-top: 20px;
@@ -1272,16 +1404,19 @@ ul {
   margin-top: 20px;
   width: 80%;
   display: flex;
-  flex-wrap: wrap; /* Ensures items wrap on smaller screens */
-  gap: 20px; /* Adds consistent spacing between items */
+  flex-wrap: wrap;
+  /* Ensures items wrap on smaller screens */
+  gap: 20px;
+  /* Adds consistent spacing between items */
   justify-content: space-between;
   text-align: center;
   color: var(--text-color-gray);
 }
 
-.contact_section .contact_container > div {
+.contact_section .contact_container>div {
   flex: 1;
-  min-width: 150px; /* Minimum width for each container */
+  min-width: 150px;
+  /* Minimum width for each container */
   height: 200px;
   transition: all 0.3s ease;
   display: flex;
@@ -1290,7 +1425,7 @@ ul {
   align-items: center;
   border-radius: 20px;
   opacity: 0.8;
-  background-color: #f9f9f9;
+  background-color: var(--bg-black-100);
 }
 
 .contact_section .contact_container i {
@@ -1300,13 +1435,13 @@ ul {
   transition: all 0.3s ease-in-out;
 }
 
-.contact_section .contact_container > div:hover {
+.contact_section .contact_container>div:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   opacity: 1;
   transform: translateY(-5px);
 }
 
-.contact_section .contact_container > div:hover i {
+.contact_section .contact_container>div:hover i {
   font-size: 2rem;
 }
 
@@ -1329,19 +1464,23 @@ ul {
 
 .contact_section .contact_form .form_group {
   width: 100%;
-  /* margin-top: 45px; */
+  margin-top: 45px;
+ 
 }
 
 .contact_section .contact_form .name_email_form {
   display: flex;
   width: 100%;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
-  gap: 10px; /* Adds space between form fields */
+  flex-wrap: wrap;
+  /* Allows wrapping on smaller screens */
+  gap: 10px;
+  /* Adds space between form fields */
 }
 
 .contact_section .contact_form .name_email_form .form_group {
   flex: 1;
-  min-width: calc(50% - 10px); /* Adjusts width for wrapping */
+  min-width: calc(50% - 10px);
+  /* Adjusts width for wrapping */
 }
 
 .contact_section .contact_form .form_group input,
@@ -1351,7 +1490,7 @@ ul {
   padding: 15px;
   border-radius: 20px;
   border: 2px dotted var(--main-bg-color);
-  background-color: #f9f9f9;
+  background-color: var(--bg-black-100);
 }
 
 .contact_section .contact_form .form_group textarea {
@@ -1451,62 +1590,85 @@ ul {
 /* Media Queries */
 @media (max-width: 768px) {
   .contact_section .contact_container {
-    flex-direction: column; /* Stacks all items in a single column */
-    align-items: center; /* Centers items horizontally */
+    flex-direction: column;
+    /* Stacks all items in a single column */
+    align-items: center;
+    /* Centers items horizontally */
   }
 
-  .contact_section .contact_container > div {
-    width: 100%; /* Each container takes full width */
-    margin-bottom: 20px; /* Adds space between stacked items */
+  .contact_section .contact_container>div {
+    width: 100%;
+    /* Each container takes full width */
+    margin-bottom: 20px;
+    /* Adds space between stacked items */
   }
 
   .footer_text {
-    margin: 150px 0 25px 0; /* Adjusted margin for smaller screens */
+    margin: 150px 0 25px 0;
+    /* Adjusted margin for smaller screens */
   }
 }
 
 @media (max-width: 480px) {
   .contact_section .contact_form .name_email_form .form_group {
-    min-width: 100%; /* Full width for smaller screens */
+    min-width: 100%;
+    /* Full width for smaller screens */
   }
 
   .contact_section .contact_form .form_group input,
   .contact_section .contact_form .form_group textarea {
-    height: auto; /* Adjusts height for better fit */
+    height: auto;
+    /* Adjusts height for better fit */
     padding: 10px;
   }
 
   .contact_section .contact_form #contact_button {
-    width: 100%; /* Full width button */
+    width: 100%;
+    /* Full width button */
   }
-  .contact_section .doubt_text h2{
+
+  .contact_section .doubt_text h2 {
     font-size: 1.5rem;
   }
+
   .contact_section .doubt_text {
     margin-bottom: 20px;
   }
- 
-  .contact_section .contact_container > div{
+
+  .contact_section .contact_container>div {
     flex: none;
     height: 170px;
   }
+
   .footer_text {
     margin: 0 0 10px 0;
   }
-  .contact_section .contact_form .form_group input{
+
+  .contact_section .contact_form .form_group input {
     height: 55px;
   }
-  .contact_section .contact_form #contact_button{
+
+  .contact_section .contact_form #contact_button {
     width: 80%;
   }
+
   .contact_section .doubt_text h4 {
     font-size: 1rem;
   }
-  .doubt_text:nth-child(4) > h4:nth-child(1){
+
+  .doubt_text:nth-child(4)>h4:nth-child(1) {
     font-size: 1.5rem;
 
   }
-  .doubt_text:nth-child(4){
+
+  .doubt_text:nth-child(4) {
     margin: 0;
   }
+
+  .button-86 {
+    width: 54px;
+    height: 15px;
+    font-size: 7px;
+  }
+
 }
