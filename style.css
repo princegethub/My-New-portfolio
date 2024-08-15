@@ -1658,7 +1658,8 @@ ul {
   }
   .about_cards{
     width: 90%;
-    height: 250px;
+    height: 325px;
+    border-radius: 20px;
   }
   .contact_section .contact_form .form_group input,
   .contact_section .contact_form .form_group textarea {
@@ -1700,21 +1701,4 @@ ul {
 
   .contact_section .doubt_text h4 {
     font-size: 0.8rem;
-  }
 
-  .doubt_text:nth-child(4)>h4:nth-child(1) {
-    font-size: 1.5rem;
-
-  }
-
-  .doubt_text:nth-child(4) {
-    margin: 0;
-  }
-
-  .button-86 {
-    width: 54px;
-    height: 15px;
-    font-size: 7px;
-  }
-
-}
