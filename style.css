@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zain:wght@200;300;400;700;800;900&display=swap');
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap');
+=======
+>>>>>>> origin/main
 
 :root {
   
@@ -11,9 +14,12 @@
   --text-color-white: #fff;
   --main-bg-color-light: rgba(244, 44, 43, 0.3);
 
+<<<<<<< HEAD
   --bg-black-100: #f9f9f9;
 
 
+=======
+>>>>>>> origin/main
 }
 
 
@@ -33,7 +39,10 @@ body {
   line-height: 1.5;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
+<<<<<<< HEAD
  
+=======
+>>>>>>> origin/main
   width: 100%;
   height: 100%;
   color: var(--text-color-white);
@@ -68,7 +77,11 @@ ul {
 }
 #dark_mode{
   transition: all 0.3s ease;
+<<<<<<< HEAD
   font-size: 1rem;
+=======
+  font-size: 1rem`;
+>>>>>>> origin/main
 }
 .aside {
   width: 30vw;
@@ -89,10 +102,13 @@ ul {
 
 .aside .text_area .bar {
   font-size: 2rem;
+<<<<<<< HEAD
   display: none;
 }
 .aside .text_area .bar i{
   transition: all 0.3s ease;
+=======
+>>>>>>> origin/main
 }
 
 .aside .text_area .logo {
@@ -108,7 +124,11 @@ ul {
   height: 1.375rem;
   width: 25rem;
   position: relative;
+<<<<<<< HEAD
   left: 245px;
+=======
+  left: 228px;
+>>>>>>> origin/main
   margin-top: 1.5rem;
   /* background-color: rgb(41, 190, 0); */
   display: flex;
@@ -207,7 +227,11 @@ ul {
   width: 200px;
 
   left: 280px;
+<<<<<<< HEAD
   bottom: -182px;
+=======
+  bottom: -100px;
+>>>>>>> origin/main
 
 }
 
@@ -569,9 +593,13 @@ ul {
     flex-direction: column;
     height: auto;
   }
+<<<<<<< HEAD
   .aside .text_area .bar{
     display: block;
   }
+=======
+
+>>>>>>> origin/main
   .home-page {
     width: 100%;
     height: 100vh;
@@ -603,7 +631,10 @@ ul {
     position: absolute;
     right: 15px;
     cursor: pointer;
+<<<<<<< HEAD
     top: 15px;
+=======
+>>>>>>> origin/main
   }
 
   .aside .text_area .desgin_progressbar {
@@ -739,12 +770,16 @@ ul {
 
   /* Hide the search icon in the main navigation */
   .home-page .main-content .content .navgation_main ul li:first-child {
+<<<<<<< HEAD
     position: absolute;
     top: -67px;
     left: 0;
   }
   .home-page .main-content .content .navgation_main ul li:first-child i{
     font-size: 2rem;
+=======
+    display: none;
+>>>>>>> origin/main
   }
 
   /* Hide the cart icon and the contact icon */
@@ -781,7 +816,11 @@ ul {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     margin-top: -182px;
+=======
+    margin-top: -134px;
+>>>>>>> origin/main
 
   }
 
@@ -789,7 +828,10 @@ ul {
   .home-page .main-content .content .text_profile_section .profile_image {
     width: 100%;
     text-align: center;
+<<<<<<< HEAD
     margin-top: 50px;
+=======
+>>>>>>> origin/main
   }
 
   .home-page .main-content .socal_links {
@@ -831,10 +873,14 @@ ul {
 
   .home-page .main-content .content .navgation_main ul {
     justify-content: center;
+<<<<<<< HEAD
   
     text-transform: uppercase;
     font-size: 10px;
     font-weight: bold;
+=======
+    font-size: 10px;
+>>>>>>> origin/main
   }
 
   .home-page .main-content .content .text_profile_section .profile_image img {
@@ -864,7 +910,11 @@ ul {
     /* Change from fixed to absolute */
     bottom: 0;
     /* Align to bottom of the home-page */
+<<<<<<< HEAD
     left: 150%;
+=======
+    left: 50%;
+>>>>>>> origin/main
     transform: translateX(-50%);
     /* Center horizontally */
     width: 100%;
@@ -877,6 +927,7 @@ ul {
 
   .home-page .main-content .socal_links .socal_media_links .social-icons {
     position: absolute;
+<<<<<<< HEAD
     background: var(--bg-black-100);
     padding: 12px 15px;
     border-radius: 20px;
@@ -884,6 +935,14 @@ ul {
     right: -70px;
     top: -100px;
     transition: all 0.3s ease-in;
+=======
+    background: #f9f9f9;
+    padding: 12px 15px;
+    border-radius: 20px;
+  
+    right: 0;
+    top: -107px;
+>>>>>>> origin/main
 
   }
 
@@ -1069,7 +1128,11 @@ ul {
 }
 
 /* Mobile styles */
+<<<<<<< HEAD
 @media (min-width: 300px) and (max-width: 768px) {
+=======
+@media (min-width: 410px) and (max-width: 768px) {
+>>>>>>> origin/main
   .about_page {
     height: auto;
   }
@@ -1148,7 +1211,10 @@ ul {
 
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 .project_section .project_card .card_image {
   position: relative;
   /* Ensure the pseudo-element is positioned relative to this container */
@@ -1156,11 +1222,16 @@ ul {
   height: 100%;
   overflow: hidden;
   transition: all 0.8s ease-in 5s;
+<<<<<<< HEAD
   object-fit: cover;
  
 }
 
 
+=======
+}
+
+>>>>>>> origin/main
 .project_section .project_card .card_image img {
   display: block;
   /* Ensure the image fits its container without extra space */
@@ -1169,7 +1240,10 @@ ul {
   height: 100%;
   /* Adjust to fit the container */
   object-fit: cover;
+<<<<<<< HEAD
   overflow: hidden;
+=======
+>>>>>>> origin/main
   /* Maintain the aspect ratio while covering the area */
 }
 
@@ -1214,10 +1288,14 @@ ul {
   opacity: 80%;
   font-size: 0.6rem;
   margin-bottom: 10px;
+<<<<<<< HEAD
   font-weight: 500;
   font-family: "Moderustic", sans-serif;
   line-height: 1.5;
   word-spacing: 5px;
+=======
+  font-weight: bold;
+>>>>>>> origin/main
 }
 
 .project_section .project_card .project_text_sec h6 {
@@ -1276,7 +1354,11 @@ ul {
 }
 
 /* =================mobile view=================== */
+<<<<<<< HEAD
 @media (min-width: 300px) and (max-width: 768px) {
+=======
+@media (min-width: 414px) and (max-width: 768px) {
+>>>>>>> origin/main
   .project_section .project_card {
     flex-direction: column;
     height: 400px;
@@ -1296,14 +1378,21 @@ ul {
   }
 
   .project_section .project_card {
+<<<<<<< HEAD
    
     height: 350px;
     width: 90%;
+=======
+    height: 300px;
+>>>>>>> origin/main
   }
 
   .project_section .project_card .card_image {
     width: 100%;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
   }
 
   .project_section .project_card .project_text_sec {
@@ -1647,6 +1736,7 @@ ul {
     min-width: 100%;
     /* Full width for smaller screens */
   }
+<<<<<<< HEAD
   .end_line{
     width: 100%;
   }
@@ -1661,6 +1751,9 @@ ul {
     height: 325px;
     border-radius: 20px;
   }
+=======
+
+>>>>>>> origin/main
   .contact_section .contact_form .form_group input,
   .contact_section .contact_form .form_group textarea {
     height: auto;
@@ -1674,7 +1767,11 @@ ul {
   }
 
   .contact_section .doubt_text h2 {
+<<<<<<< HEAD
     font-size: 1rem;
+=======
+    font-size: 1.5rem;
+>>>>>>> origin/main
   }
 
   .contact_section .doubt_text {
@@ -1688,7 +1785,10 @@ ul {
 
   .footer_text {
     margin: 0 0 10px 0;
+<<<<<<< HEAD
     font-size: 0.6rem;
+=======
+>>>>>>> origin/main
   }
 
   .contact_section .contact_form .form_group input {
@@ -1700,5 +1800,27 @@ ul {
   }
 
   .contact_section .doubt_text h4 {
+<<<<<<< HEAD
     font-size: 0.8rem;
 
+=======
+    font-size: 1rem;
+  }
+
+  .doubt_text:nth-child(4)>h4:nth-child(1) {
+    font-size: 1.5rem;
+
+  }
+
+  .doubt_text:nth-child(4) {
+    margin: 0;
+  }
+
+  .button-86 {
+    width: 54px;
+    height: 15px;
+    font-size: 7px;
+  }
+
+}
+>>>>>>> origin/main
