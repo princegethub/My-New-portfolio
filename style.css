@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zain:wght@200;300;400;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap');
 
 :root {
   
@@ -9,6 +10,9 @@
   --text-color-gray:  rgb(46, 46, 46);
   --text-color-white: #fff;
   --main-bg-color-light: rgba(244, 44, 43, 0.3);
+
+  --bg-black-100: #f9f9f9;
+
 
 }
 
@@ -29,6 +33,7 @@ body {
   line-height: 1.5;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
+ 
   width: 100%;
   height: 100%;
   color: var(--text-color-white);
@@ -63,7 +68,7 @@ ul {
 }
 #dark_mode{
   transition: all 0.3s ease;
-  font-size: 1rem`;
+  font-size: 1rem;
 }
 .aside {
   width: 30vw;
@@ -84,6 +89,10 @@ ul {
 
 .aside .text_area .bar {
   font-size: 2rem;
+  display: none;
+}
+.aside .text_area .bar i{
+  transition: all 0.3s ease;
 }
 
 .aside .text_area .logo {
@@ -99,7 +108,7 @@ ul {
   height: 1.375rem;
   width: 25rem;
   position: relative;
-  left: 228px;
+  left: 245px;
   margin-top: 1.5rem;
   /* background-color: rgb(41, 190, 0); */
   display: flex;
@@ -198,7 +207,7 @@ ul {
   width: 200px;
 
   left: 280px;
-  bottom: -100px;
+  bottom: -182px;
 
 }
 
@@ -560,7 +569,9 @@ ul {
     flex-direction: column;
     height: auto;
   }
-
+  .aside .text_area .bar{
+    display: block;
+  }
   .home-page {
     width: 100%;
     height: 100vh;
@@ -592,6 +603,7 @@ ul {
     position: absolute;
     right: 15px;
     cursor: pointer;
+    top: 15px;
   }
 
   .aside .text_area .desgin_progressbar {
@@ -727,7 +739,12 @@ ul {
 
   /* Hide the search icon in the main navigation */
   .home-page .main-content .content .navgation_main ul li:first-child {
-    display: none;
+    position: absolute;
+    top: -67px;
+    left: 0;
+  }
+  .home-page .main-content .content .navgation_main ul li:first-child i{
+    font-size: 2rem;
   }
 
   /* Hide the cart icon and the contact icon */
@@ -764,7 +781,7 @@ ul {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    margin-top: -134px;
+    margin-top: -182px;
 
   }
 
@@ -772,6 +789,7 @@ ul {
   .home-page .main-content .content .text_profile_section .profile_image {
     width: 100%;
     text-align: center;
+    margin-top: 50px;
   }
 
   .home-page .main-content .socal_links {
@@ -813,7 +831,10 @@ ul {
 
   .home-page .main-content .content .navgation_main ul {
     justify-content: center;
+  
+    text-transform: uppercase;
     font-size: 10px;
+    font-weight: bold;
   }
 
   .home-page .main-content .content .text_profile_section .profile_image img {
@@ -843,7 +864,7 @@ ul {
     /* Change from fixed to absolute */
     bottom: 0;
     /* Align to bottom of the home-page */
-    left: 50%;
+    left: 150%;
     transform: translateX(-50%);
     /* Center horizontally */
     width: 100%;
@@ -856,12 +877,13 @@ ul {
 
   .home-page .main-content .socal_links .socal_media_links .social-icons {
     position: absolute;
-    background: #f9f9f9;
+    background: var(--bg-black-100);
     padding: 12px 15px;
     border-radius: 20px;
   
-    right: 0;
-    top: -107px;
+    right: -70px;
+    top: -100px;
+    transition: all 0.3s ease-in;
 
   }
 
@@ -1047,7 +1069,7 @@ ul {
 }
 
 /* Mobile styles */
-@media (min-width: 410px) and (max-width: 768px) {
+@media (min-width: 300px) and (max-width: 768px) {
   .about_page {
     height: auto;
   }
@@ -1126,6 +1148,7 @@ ul {
 
 }
 
+
 .project_section .project_card .card_image {
   position: relative;
   /* Ensure the pseudo-element is positioned relative to this container */
@@ -1133,7 +1156,10 @@ ul {
   height: 100%;
   overflow: hidden;
   transition: all 0.8s ease-in 5s;
+  object-fit: cover;
+ 
 }
+
 
 .project_section .project_card .card_image img {
   display: block;
@@ -1143,6 +1169,7 @@ ul {
   height: 100%;
   /* Adjust to fit the container */
   object-fit: cover;
+  overflow: hidden;
   /* Maintain the aspect ratio while covering the area */
 }
 
@@ -1187,7 +1214,10 @@ ul {
   opacity: 80%;
   font-size: 0.6rem;
   margin-bottom: 10px;
-  font-weight: bold;
+  font-weight: 500;
+  font-family: "Moderustic", sans-serif;
+  line-height: 1.5;
+  word-spacing: 5px;
 }
 
 .project_section .project_card .project_text_sec h6 {
@@ -1246,7 +1276,7 @@ ul {
 }
 
 /* =================mobile view=================== */
-@media (min-width: 414px) and (max-width: 768px) {
+@media (min-width: 300px) and (max-width: 768px) {
   .project_section .project_card {
     flex-direction: column;
     height: 400px;
@@ -1266,11 +1296,14 @@ ul {
   }
 
   .project_section .project_card {
-    height: 300px;
+   
+    height: 350px;
+    width: 90%;
   }
 
   .project_section .project_card .card_image {
     width: 100%;
+
   }
 
   .project_section .project_card .project_text_sec {
@@ -1614,7 +1647,20 @@ ul {
     min-width: 100%;
     /* Full width for smaller screens */
   }
-
+  .end_line{
+    width: 100%;
+  }
+  .contact_section .doubt_text{
+    width: 86%;
+  }
+  .about_text{
+    width: 90%;
+  }
+  .about_cards{
+    width: 90%;
+    height: 325px;
+    border-radius: 20px;
+  }
   .contact_section .contact_form .form_group input,
   .contact_section .contact_form .form_group textarea {
     height: auto;
@@ -1628,7 +1674,7 @@ ul {
   }
 
   .contact_section .doubt_text h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .contact_section .doubt_text {
@@ -1642,6 +1688,7 @@ ul {
 
   .footer_text {
     margin: 0 0 10px 0;
+    font-size: 0.6rem;
   }
 
   .contact_section .contact_form .form_group input {
@@ -1653,22 +1700,6 @@ ul {
   }
 
   .contact_section .doubt_text h4 {
-    font-size: 1rem;
-  }
+    font-size: 0.8rem;
 
-  .doubt_text:nth-child(4)>h4:nth-child(1) {
-    font-size: 1.5rem;
-
-  }
-
-  .doubt_text:nth-child(4) {
-    margin: 0;
-  }
-
-  .button-86 {
-    width: 54px;
-    height: 15px;
-    font-size: 7px;
-  }
-
-}
+  }}
