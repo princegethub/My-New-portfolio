@@ -13,12 +13,12 @@ darkMode.addEventListener("click", () => {
     darkMode.classList.remove("fa-moon");
     darkMode.classList.add("fa-sun");
     data = 1;
-    document.body.classList.add('dark');
+    document.body.classList.add("dark");
   } else {
     darkMode.classList.remove("fa-sun");
     darkMode.classList.add("fa-moon");
     data = 0;
-    document.body.classList.remove('dark');
+    document.body.classList.remove("dark");
   }
 });
 
@@ -30,11 +30,17 @@ tikTak.addEventListener("click", () => {
     tikTak.classList.remove("fa-bars");
     tikTak.classList.add("fa-xmark");
     tikTak_data = 1;
-    linkContainer.style.right = '10px';
+    linkContainer.style.right = "10px";
   } else {
     tikTak.classList.remove("fa-xmark");
     tikTak.classList.add("fa-bars");
     tikTak_data = 0;
-    linkContainer.style.right = '-50px';
+    linkContainer.style.right = "-50px";
   }
+});
+
+var typed = new Typed("#element", {
+  strings: [ "Web Developer", "UI/UX Designer","Web Designer"],
+  typeSpeed: 60,
+  loop:true
 });
